@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Bob Helander</Authors>
+    <Company />
+    <Product>DDJSB2</Product>
+    <Description>Pioneer DDJ-SB2 Reactive Library</Description>
+    <PackageProjectUrl>https://github.com/bobhelander/DDJSB2</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/bobhelander/DDJSB2</RepositoryUrl>
+    <PackageReleaseNotes>1.0.0 Initial Release</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.0.0" />
+  </ItemGroup>
+
+</Project>
