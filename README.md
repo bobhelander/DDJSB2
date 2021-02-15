@@ -11,7 +11,7 @@ https://www.pioneerdj.com/en-us/product/controller/archive/ddj-sb2/black/overvie
 using System.Linq;
 using System.Reactive;
 
-using(var ddjsb2 = Factory.CreateInstance())
+using(var ddjsb2 = PioneerDDJSB2.CreateInstance())
 {
     // Deck 1 Left side
     var deckNumber = 1;
