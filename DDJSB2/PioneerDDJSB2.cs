@@ -10,7 +10,7 @@ namespace DDJSB2
 {
     public class PioneerDDJSB2 : IDisposable
     {
-        public static PioneerDDJSB2 CreateInstance => DDJSB2.Layout.Factory.CreateInstance();
+        public static PioneerDDJSB2 CreateInstance() => DDJSB2.Layout.Factory.CreateInstance();
 
         private const string PRODUCT_NAME = "DDJ-SB2 MIDI";
 
