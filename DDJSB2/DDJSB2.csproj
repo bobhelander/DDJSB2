@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -8,13 +8,14 @@
     <Description>Pioneer DDJ-SB2 Reactive Library</Description>
     <PackageProjectUrl>https://github.com/bobhelander/DDJSB2</PackageProjectUrl>
     <RepositoryUrl>https://github.com/bobhelander/DDJSB2</RepositoryUrl>
-    <PackageReleaseNotes>1.0.2 CreateInstance() Fixed
+    <PackageReleaseNotes>1.0.3 Fixed base address for the GroupPads. Fixed channel for GroupPads.
+1.0.2 CreateInstance() Fixed
 1.0.1 CreateInstance() Changed
 1.0.0 Initial Release
 </PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>

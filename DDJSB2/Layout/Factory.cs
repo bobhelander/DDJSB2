@@ -21,7 +21,9 @@ namespace DDJSB2.Layout
                     { 4, CreateDeck() },
                     { 5, CreateEffect() },
                     { 6, CreateEffect() },
-                    { 7, CreateCenter() }
+                    { 7, CreateCenter() },
+                    { 8, CreateDeckPads() },
+                    { 9, CreateDeckPads() }
                 }
             };
         }
@@ -68,6 +70,13 @@ namespace DDJSB2.Layout
                 Buttons.ManualLoopShiftedButton,
                 Buttons.SamplerButton,
                 Buttons.SamplerShiftedButton,
+            };
+        }
+
+        static private List<IControl> CreateDeckPads()
+        {
+            return new List<IControl>
+            {
                 Buttons.HotQueInButton,
                 Buttons.HotQueInShiftedButton,
                 Buttons.HotQueOutButton,

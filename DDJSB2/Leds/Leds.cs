@@ -88,10 +88,10 @@ namespace DDJSB2
         public static Led Fx3Led = new Led { name = "FX 3 Select", baseChannel = fxLedsBaseChannel, ledButton = 0x49, shiftedLedButton = 0x65 };
 
         // Pad LEDs
-        public static Led InLed = new Led { name = "In", baseChannel = fxLedsBaseChannel, ledButton = 0x00, shiftedLedButton = (0x00 + 0x08) };
-        public static Led OutLed = new Led { name = "Out", baseChannel = fxLedsBaseChannel, ledButton = 0x01, shiftedLedButton = (0x01 + 0x08) };
-        public static Led ExitLed = new Led { name = "Exit", baseChannel = fxLedsBaseChannel, ledButton = 0x02, shiftedLedButton = (0x02 + 0x08) };
-        public static Led Pad2xLed = new Led { name = "1/2X", baseChannel = fxLedsBaseChannel, ledButton = 0x03, shiftedLedButton = (0x03 + 0x08) };
+        public static Led InLed = new Led { name = "In", baseChannel = padLedsBaseChannel, ledButton = 0x00, shiftedLedButton = (0x00 + 0x08) };
+        public static Led OutLed = new Led { name = "Out", baseChannel = padLedsBaseChannel, ledButton = 0x01, shiftedLedButton = (0x01 + 0x08) };
+        public static Led ExitLed = new Led { name = "Exit", baseChannel = padLedsBaseChannel, ledButton = 0x02, shiftedLedButton = (0x02 + 0x08) };
+        public static Led Pad2xLed = new Led { name = "1/2X", baseChannel = padLedsBaseChannel, ledButton = 0x03, shiftedLedButton = (0x03 + 0x08) };
 
         // Levels
         public static LevelLed Level = new LevelLed { name = "Level", baseChannel = channelLevelLedsBaseChannel, ledButton = 0x02 };

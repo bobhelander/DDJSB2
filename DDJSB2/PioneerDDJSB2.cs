@@ -33,6 +33,8 @@ namespace DDJSB2
             MidiOut?.SendBuffer(new byte[] { 0x9B, 0x09, 0x7f });
         }
 
+        public void SendBuffer(byte[] buffer) => MidiOut?.SendBuffer(buffer);
+
         public void LedControl(Leds.Deck deck, Led led, bool shift, bool on)
         {
             byte channel = (byte)(led.baseChannel + deck);
