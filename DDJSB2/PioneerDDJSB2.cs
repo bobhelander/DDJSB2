@@ -18,6 +18,8 @@ namespace DDJSB2
         public NAudio.Midi.MidiIn MidiIn { get; set; }
         public NAudio.Midi.MidiOut MidiOut { get; set; }
 
+        public bool EventLogging { get; set; } = false;
+
         public void Initialize()
         {
             MidiOut = new NAudio.Midi.MidiOut(FindOutDeviceNumber());
@@ -71,14 +73,16 @@ namespace DDJSB2
             if (e.MidiEvent is NAudio.Midi.NoteEvent)
             {
                 var noteEvent = e.MidiEvent as NAudio.Midi.NoteEvent;
-                Console.WriteLine($"Midi Note: {noteEvent.NoteNumber:X2}: {noteEvent}");
+                
+                if (EventLogging) Console.WriteLine($"Midi Note: {noteEvent.NoteNumber:X2}: {noteEvent}");
 
                 NoteEvent(noteEvent.Channel, (byte)noteEvent.NoteNumber, (byte)noteEvent.Velocity);
             }
             else if (e.MidiEvent is NAudio.Midi.ControlChangeEvent)
             {
                 var controlChangeEvent = e.MidiEvent as NAudio.Midi.ControlChangeEvent;
-                Console.WriteLine($"ControlChangeEvent: {(byte)controlChangeEvent.Controller:X2}: {controlChangeEvent}");
+
+                if (EventLogging) Console.WriteLine($"ControlChangeEvent: {(byte)controlChangeEvent.Controller:X2}: {controlChangeEvent}");
 
                 var controlNumber = (byte)controlChangeEvent.Controller;
                 var channelNumber = controlChangeEvent.Channel;
@@ -88,7 +92,7 @@ namespace DDJSB2
             }
             else
             {
-                Console.WriteLine($"Midi: {e.MidiEvent}: {e.RawMessage}");
+                if (EventLogging) Console.WriteLine($"Midi: {e.MidiEvent}: {e.RawMessage}");
             }
         }
 
