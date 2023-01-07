@@ -57,10 +57,17 @@ namespace DDJSB2
 
         public void LevelLedControl(Leds.Deck deck, LevelLed led, byte value)
         {
-            byte channel = (byte)(led.baseChannel + deck);
-            byte button = led.ledButton;
+            try
+            {
+                byte channel = (byte)(led.baseChannel + deck);
+                byte button = led.ledButton;
 
-            MidiOut?.SendBuffer(new byte[] { channel, button, value });
+                MidiOut?.SendBuffer(new byte[] { channel, button, value });
+            }
+            catch(Exception ex)
+            {
+                // This occurs when there are buffer problems in the unmanaged code.
+            }
         }
 
         private void ErrorReceived(object sender, NAudio.Midi.MidiInMessageEventArgs e)

@@ -70,6 +70,10 @@ namespace DDJSB2.Layout
                 Buttons.ManualLoopShiftedButton,
                 Buttons.SamplerButton,
                 Buttons.SamplerShiftedButton,
+
+                // Add Encoder
+                Encoders.JogDialEncoder,
+                Encoders.JogDialShiftedEncoder,
             };
         }
 
