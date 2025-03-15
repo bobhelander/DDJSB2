@@ -8,7 +8,8 @@
     <Description>Pioneer DDJ-SB2 Reactive Library</Description>
     <PackageProjectUrl>https://github.com/bobhelander/DDJSB2</PackageProjectUrl>
     <RepositoryUrl>https://github.com/bobhelander/DDJSB2</RepositoryUrl>
-    <PackageReleaseNotes>1.0.6 Browse encoder missing cutoff value.
+    <PackageReleaseNotes>1.1.0 Updated dependencies
+1.0.6 Browse encoder missing cutoff value.
 1.0.5 Jog dial missing.  Added.
 1.0.4 Added EventLogging property to quiet console output.
 1.0.3 Fixed base address for the GroupPads. Fixed channel for GroupPads.
@@ -18,7 +19,7 @@
 </PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <Version>1.1.0</Version>
+    <Version>2.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NAudio.Midi" Version="2.1.0" />
+    <PackageReference Include="NAudio.Midi" Version="2.2.1" />
   </ItemGroup>
 
 </Project>
